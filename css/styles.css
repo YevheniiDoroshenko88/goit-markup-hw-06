@@ -647,9 +647,7 @@ h1,h2,h3,h4,h5,h6,p {
     text-align: center;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    margin-left: 12px;
-    padding: 10px 10px 10px 28px;
-    
+    margin-left: 12px;   
 }
 
 /* PAGE PORTFOLIO */
@@ -858,15 +856,12 @@ h1,h2,h3,h4,h5,h6,p {
     top: 50%;
     left: 12px;
     display: inline-block;
-    /* transform: translateY(-50%); */
-}
-.form-input ~ .form-icon:focus {
-    background-color: #2196F3;
-    transition-property: background-color;
+    fill: #000000;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    /* transform: translateY(-50%); */
 }
-
 .form-label {
     margin-bottom: 4px;
     display: block;
@@ -886,20 +881,20 @@ h1,h2,h3,h4,h5,h6,p {
     height: 40px;
     color: #212121;
     padding-left: 42px;
-}
-.form-input:focus {
-    border-color: #2196F3;
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-form:focus-within {
-    fill: #2196F3;
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+.form-input:focus {
+    border-color: #2196F3;
+    
 }
-
+.form-field:focus-within > .form-input {
+    border-color: #2196F3;
+} 
+.form-field:focus-within > .form-icon {
+    fill: #2196F3;
+}
 .coment-title {
     display: block;
     font-weight: 400;
@@ -910,6 +905,7 @@ h1,h2,h3,h4,h5,h6,p {
     margin-bottom: 4px;
 }
 .form-message {
+    display: block;
     padding-top: 12px;
     padding-left: 16px;
     width: 100%;
@@ -946,9 +942,8 @@ h1,h2,h3,h4,h5,h6,p {
     height: 15px;
     border: 2px solid #757575;
     border-radius: 2px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='10' fill='none'%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m1.957 4.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3E%3C/svg%3E");
     cursor: pointer;
-    margin-right: 7px;
-    
     background-repeat: no-repeat;
     background-position: center;
     background-size: 0;
@@ -959,14 +954,16 @@ h1,h2,h3,h4,h5,h6,p {
 .form-checkbox:checked {
     background-color: #2196F3;
     border-color: transparent;
-    background-size: 13px;
+    background-size: contain;
 }
+
 
 .form-btn {
     display: block;
     margin: 0 auto;
 }
 .form-agreement-text {
+    margin-left: 7px;
     user-select: none;
     color: #757575;
     font-weight: 400;
@@ -976,6 +973,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .form-agreement-link {
     color: #2196F3;
+  
 }
 
 /*  колір основного тексту #212121 
